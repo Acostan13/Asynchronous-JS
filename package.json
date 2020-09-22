@@ -1,0 +1,22 @@
+{
+  "name": "asynchronous-js",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acostan13/Asynchronous-JS.git"
+  },
+  "author": "alex costan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Acostan13/Asynchronous-JS/issues"
+  },
+  "homepage": "https://github.com/Acostan13/Asynchronous-JS#readme",
+  "dependencies": {
+    "superagent": "^6.1.0"
+  }
+}
