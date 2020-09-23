@@ -36,3 +36,20 @@ readFilePro(`${__dirname}/dog.txt`)
     .catch((err) => {
         console.log(err.message)
     })
+
+// async functions will work on code while not affecting the event loop
+const getDogPic = async () => {
+    try {
+        const data = await readFilePro(`${__dirname}/dog.txt`)
+        console.log(`Breed: ${data}`)
+    
+        const res = await superagent.get(`https://dog.ceo/api/breed/${data}/images/random`)
+        console.log(res.body.message)
+    
+        await writeFilePro('dog-img.txt', res.body.message)
+        console.log('Random dog image saved to file!')
+    } catch (err) {
+        console.log(err)
+    }
+}
+getDogPic()
